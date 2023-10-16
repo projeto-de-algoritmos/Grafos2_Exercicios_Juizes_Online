@@ -24,6 +24,33 @@ void enfileirar(int x) {
     }
 }
 
+// Função "desenfileirar" - Retorna o primeiro elemento da fila
+int desenfileirar() {
+    int x = fila->elemento;
+    Fila *aux = fila;
+    fila = fila->prox;
+    free(aux);
+    return x;
+}
+
+// Função "estaVazia" - Verifica se a fila está vazia
+int estaVazia() {
+    if (fila == NULL)
+        return 1;
+    return 0;
+}
+
+int numCidades, numEstradas, numCidadesRota, cidadeConserto, grafo[1000][1000], custos[1000];
+
+void inicializarGrafo() {
+    for (int i = 0; i < numCidades; i++) {
+        for (int j = 0; j < numCidades; j++) {
+            grafo[i][j] = INT_MAX;
+        }
+        custos[i] = INT_MAX;
+    }
+}
+
 // Algoritmo de Dijkstra
 int dijkstra(int origem, int destino) {
     custos[origem] = 0;
@@ -53,7 +80,25 @@ int main() {
     cidadeConserto = cidade onde o veículo foi consertado
     */
 
-    printf("%d\n", dijkstra(cidadeConserto, numCidadesRota - 1));
+    while (scanf("%d %d %d %d", &numCidades, &numEstradas, &numCidadesRota, &cidadeConserto) == 4) {
+        if (numCidades == 0 && numEstradas == 0 && numCidadesRota == 0 && cidadeConserto == 0)
+            break;
 
+        inicializarGrafo();
+ 
+        for (int i = 1; i <= numEstradas; i++) {
+
+            int cidadeOrigem, cidadeDestino, custoEstrada;
+            scanf("%d %d %d", &cidadeOrigem, &cidadeDestino, &custoEstrada);
+            // Se ambas as cidades estiverem fora da rota de serviço
+            if (cidadeOrigem >= numCidadesRota && cidadeDestino >= numCidadesRota) {
+                // Adicione a aresta normalmente (ida e volta)
+                grafo[cidadeOrigem][cidadeDestino] = custoEstrada;
+                grafo[cidadeDestino][cidadeOrigem] = custoEstrada;
+            }
+            
+        }
+        printf("%d\n", dijkstra(cidadeConserto, numCidadesRota - 1));
+    }
     return 0;
 }
