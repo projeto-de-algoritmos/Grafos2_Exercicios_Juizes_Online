@@ -96,7 +96,20 @@ int main() {
                 grafo[cidadeOrigem][cidadeDestino] = custoEstrada;
                 grafo[cidadeDestino][cidadeOrigem] = custoEstrada;
             }
-            
+            // Se a cidadeDestino pertencer à rota de serviço
+            if (cidadeOrigem >= numCidadesRota && cidadeDestino < numCidadesRota)
+                grafo[cidadeOrigem][cidadeDestino] = custoEstrada; // Adicione apenas a estrada que chega na cidadeDestino
+
+            // Se a cidadeOrigem pertencer à rota de serviço
+            if (cidadeOrigem < numCidadesRota && cidadeDestino >= numCidadesRota)
+                grafo[cidadeDestino][cidadeOrigem] = custoEstrada; // Adicione apenas a estrada que chega na cidadeOrigem
+
+            // Se ambas as cidades forem cidades consecutivas na rota de serviço
+            if (cidadeOrigem < numCidadesRota && cidadeDestino < numCidadesRota && abs(cidadeOrigem - cidadeDestino) == 1) { // cidadeOrigem < numCidadesRota && cidadeDestino < numCidadesRota significa que cidadeOrigem e cidadeDestino pertencem à rota de serviço
+                // Adicione a estrada normalmente
+                grafo[cidadeOrigem][cidadeDestino] = custoEstrada;
+                grafo[cidadeDestino][cidadeOrigem] = custoEstrada;
+            }
         }
         printf("%d\n", dijkstra(cidadeConserto, numCidadesRota - 1));
     }
