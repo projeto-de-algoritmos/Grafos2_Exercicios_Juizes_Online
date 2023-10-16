@@ -13,7 +13,7 @@
 
 O repositório contém soluções para algumas questões de juíz online. Segue a lista dos exercicios escolhidos:
 
-- Codeforces Round 408 (Div. 2) - D. Police Stations (https://codeforces.com/contest/796/problem/D)
+- Beecrowd- Desvio de Rota (https://www.beecrowd.com.br/repository/UOJ_1123.html)
 - Educational Codeforces Round 22 - C. The Tag Game - (http://codeforces.com/contest/813/problem/C)
 - SPOJ - DIGOKEYS - Find the Treasure (https://www.spoj.com/problems/DIGOKEYS/)
 - SPOJ - SPIKES - Spiky Mazes (https://www.spoj.com/problems/SPIKES/)
