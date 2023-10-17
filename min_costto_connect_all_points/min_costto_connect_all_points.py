@@ -35,3 +35,10 @@ class Solution:
             if uf.union(i, j):
                 cost += dist
         return cost
+
+if __name__ == "__main__":
+    solution = Solution()
+    input_example_1 = [[0,0],[2,2],[3,10],[5,2],[7,0]]
+    input_example_2 = [[3,12],[-2,5],[-4,1]]
+
+    print(solution.minCostConnectPoints(input_example_1))
