@@ -13,22 +13,22 @@
 
 O repositório contém soluções para algumas questões de juíz online. Segue a lista dos exercicios escolhidos:
 
-- Beecrowd- Desvio de Rota (https://www.beecrowd.com.br/repository/UOJ_1123.html)
-- Educational Codeforces Round 22 - C. The Tag Game - (http://codeforces.com/contest/813/problem/C)
-- SPOJ - DIGOKEYS - Find the Treasure (https://www.spoj.com/problems/DIGOKEYS/)
-- SPOJ - SPIKES - Spiky Mazes (https://www.spoj.com/problems/SPIKES/)
+- CCHESS, COSTLY CHESS (https://www.spoj.com/problems/CCHESS/)
+- Desvio de Rota - (https://www.beecrowd.com.br/judge/pt/problems/view/1123)
+- Min Cost to Connect All Points
+ (https://leetcode.com/problems/min-cost-to-connect-all-points/description/)
 
 
 ## Screenshots
 
-- Resultado do D. Police Stations
-![Resultado do D. Police Stations](assets/submit_d_police_stations.png)
+- CCHESS, COSTLY CHESS
+![CCHESS, COSTLY CHESS](assets/cchess.png)
 
-- Resultado do C. The Tag Game
-![Resultado do C. The Tag Game](assets/submit_the_tag_game.png)
+- Min Cost to Connect All Points
+![Min Cost to Connect All Points](assets/min_cost.png)
 
-- Resultado do DIGOKEYS - Find the Treasure
-![Resultado do DIGOKEYS - Find the Treasure](assets/submit_digo_keys.png)
+- Desvio de Rota 
+![Desvio de Rota](assets/descio_de_rota.png)
 
 
 ## Instalação 
